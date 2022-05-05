@@ -21,4 +21,7 @@ import board.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', board.views.home),
+    path('notice/', board.views.notice),
+    path('test/', board.views.home2),
+    path('register/', board.views.register),
 ]
