@@ -79,8 +79,11 @@
       </div>
 
       <div class="logo-image">
+         <a href="/home">
         <img src="{% static 'assets/very_logo.png' %}" alt="Market Kurly" />
+      </a>
       </div>
+
 
       <nav class="navbar">
         <button type="button" class="navbar-close">
@@ -856,7 +859,7 @@
             </ul>
           </li>
           <li class="new-product-category">
-            <a href="#">신상품</a>
+            <a href="/notice">고객센터</a>
           </li>
           <li class="best-product-category">
             <a href="#">베스트</a>
@@ -871,9 +874,11 @@
 
         <div class="sub-menu">
           <form action="#" class="search-box">
-            <input type="text" placeholder="검색하기" />
-            <button type="button" class="button-search"></button>
+            <input type="text" placeholder="검색어를 입력해주세요." />
+            <button type="button" class="button-search" >
+            </button>
           </form>
+          <input type="image" src="{% static 'assets/ico_search_x2.webp' %}" class="btn_search" width="30" height="30">
           <button type="button" class="button-coords"></button>
           <button type="button" class="button-cart"></button>
         </div>

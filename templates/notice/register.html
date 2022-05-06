@@ -16,6 +16,7 @@
             <div class="col-lg-8 col-xl-7">
                 <form method="post">
                     {% csrf_token %}
+                    {{ boardForm }}
                     <div class="form-floating mb-3">
                         <input name="title" class="form-control" id="title" type="text" placeholder="제목을 입력해주세요."/>
                         <label for="title">제목</label>

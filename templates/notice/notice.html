@@ -76,6 +76,16 @@
 </tr>
 </thead>
 <tbody>
+
+        {% for list in posts %}
+            <ul>
+                <li>{{list.title}}</li>
+                <li>{{list.contents}}</li>
+            </ul>
+        {% endfor %}
+
+
+
 <tr>
 <td width="50" nowrap="" align="center">
 공지 </td>
