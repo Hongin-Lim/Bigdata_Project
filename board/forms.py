@@ -9,7 +9,7 @@ class BoardForm(forms.ModelForm) :
 
 from django import forms
 
-from board.models import Question, Answer, Comment
+from board.models import Question, Answer, Comment, Notice
 
 
 class QuestionForm(forms.ModelForm):
@@ -25,6 +25,18 @@ class QuestionForm(forms.ModelForm):
         #     'content' : forms.Textarea(attrs={'class':'form-control', 'rows':10}),
         # }
 
+class NoticeForm(forms.ModelForm):
+    class Meta:
+        model = Notice
+        fields = ['subject', 'content']
+        labels = {
+            'subject': '제목',
+            'content': '내용',
+        }
+        # widgets = {
+        #     'subject' : forms.TextInput(attrs={'class':'form-control'}),
+        #     'content' : forms.Textarea(attrs={'class':'form-control', 'rows':10}),
+        # }
 
 class AnswerForm(forms.ModelForm):
     class Meta:

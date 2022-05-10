@@ -13,7 +13,7 @@ def home(request):
     return render(request, 'home/base.html')
 
 def home2(request):
-    return render(request, 'costomer_service/notice.html')
+    return render(request, 'home/mainpage.html')
 
 
 
@@ -48,10 +48,12 @@ def board_list(request):
     return render(request, 'board_list.html', {"boards":boards})
 
 
+# 1:1 문의
+
 from django.shortcuts import render
-from .models import Question
+from .models import Question, Notice
 from django.utils import timezone
-from .forms import QuestionForm, AnswerForm
+from .forms import QuestionForm, AnswerForm, NoticeForm
 
 def q_index(request):
     # 질문목록출력
@@ -100,3 +102,51 @@ def question_create(request):
     context = {'form':form}
     return render(request, 'costomer_service/question_form.html', context)
 
+# 공지사항
+
+def n_index(request):
+    # 질문목록출력
+    notice_list = Notice.objects.order_by('-create_date')
+    context = {'notice_list' : notice_list}
+    return render(request, 'costomer_service/notice1.html', context)
+
+def n_detail(request, notice_id):
+    # 질문내용출력
+    notice = Notice.objects.get(id=notice_id)
+    context = {'notice' : notice}
+    return render(request, 'costomer_service/notice_detail.html', context)
+
+# @login_required(login_url='common:login')
+def n_answer_create(request, notice_id):
+    """
+   답변등록
+    """
+    notice = get_object_or_404(Question, pk=notice_id)
+    if request.method == "POST":
+        n_form = AnswerForm(request.POST)
+        if n_form.is_valid():
+            answer = n_form.save(commit=False)
+            # answer.author = request.user  # 추가한 속성 author 적용
+            answer.create_date = timezone.now()
+            answer.notice = notice
+            answer.save()
+            return redirect('{}#answer_{}'.format(
+                resolve_url('board:n_detail', notice_id=notice.id), answer.id))
+    else:
+        n_form = AnswerForm()
+    context = {'notice': notice, 'n_form': n_form}
+    return render(request, 'cosmomer_service/notice_detail.html', context)
+
+def notice_create(request):
+    #질문등록
+    if request.method == 'POST':
+        form = NoticeForm(request.POST)
+        if form.is_valid():
+            notice = form.save(commit=False)
+            notice.create_date = timezone.now()
+            notice.save()
+            return redirect('board:n_index')
+    else:
+        form = NoticeForm()
+    context = {'form':form}
+    return render(request, 'costomer_service/notice_form.html', context)
