@@ -1,0 +1,37 @@
+{% extends 'home/base.html' %}
+{% block content %}
+
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<br><br><br><br><br>
+<div class="box1" style="text-align: center;">
+    <h2>회원가입</h2>
+    <form method="post" action="/">
+         {% csrf_token %}
+    <label>"ID/아이디"를 입력하세요.</label>
+    <input type="text" name="username" class="span3">
+    <label>"이름"을 입력하세요.</label>
+    <input type="text" name="first_name" class="span3">
+    <label>"PW/패스워드"를 입력하세요.</label>
+    <input type="password" name="password1" class="span3">
+	<label>"PW/패스워드"를 재입력하세요.</label>
+    <input type="password" name="password2" class="span3">
+    <label>        Email/이메일</label>
+
+        <strong>{{ now_user }}</strong><br>
+        <br>
+    <input method="POST" type="submit" value="가입하기" class="btn btn-primary pull-center">
+    <div class="clearfix"></div>
+    </form>
+    {% load socialaccount %}
+
+    <a href="{% provider_login_url 'kakao' method='oauth2' %}">
+    카카오톡 회원가입
+    </a>
+    </div>
+<br><br><br><br>
+
+
+{% endblock %}
