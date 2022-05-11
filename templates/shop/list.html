@@ -1,0 +1,45 @@
+{% extends 'home/base.html' %}
+
+{% block body %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Django Shop{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% block extra_style %}
+    {% endblock %}
+</head>
+
+<div class="row">
+<div class="col-2">
+<div class="list-group">
+<a href="/" class="list-group-item {% if not current_category %}active{% endif %}">All</a>
+
+{% for c in categories %}
+
+<a href="{{c.get_absolute_url}}" class="list-group-item {% if current_category.slug == c.slug %}active{% endif %}">{{c.name}}</a>
+{% endfor %}
+</div>
+</div>
+
+<div class="col">
+<div class="alert alert-info" role="alert">
+{% if current_category %}{{current_category.name}}{% else %}AllProducts{% endif %}
+</div>
+<div class="row">
+{% for product in products %}
+
+<div class="card">
+<img class="card-img-top" src="{{product.image.url}}" alt="Product Image">
+<div class="card-body"></div>
+<h5 class="card-title">{{product.name}}</h5>
+<p class="card-text">{{product.description}} <span class="badge badge-secondary">{{product.price}}</span></p>
+    <a href="{{product.get_absolute_url}}" class="btn btn-pri-mary">View Detail</a>
+</div>
+</div>
+</div>
+    {% endfor %}
+</div>
+</div>
+</div>
+    {% endblock %}

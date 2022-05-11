@@ -15,37 +15,37 @@ def home(request):
 def home2(request):
     return render(request, 'home/mainpage.html')
 
-
-
-def register(request):
-    if request.method == 'GET':
-        boardForm = BoardForm()
-        return render(request, 'costomer_service/register.html', {'boardForm':boardForm})
-    elif request.method == 'POST':
-        boardForm = BoardForm(request.POST)
-        if boardForm.is_valid():
-            board = boardForm.save(commit=False)
-            board.save()
-            print('잘됌')
-        if not boardForm.is_valid():
-            print('안됌')
-    return redirect('/costomer_service')
-
-
-def notice(request):
-    posts = Board.objects.all().order_by('-id')
-    return render(request, 'costomer_service/costomer_service.html',
-                      {'posts': posts})
-
-def read(request, bid):
-    post = Board.objects.all( Q(id=bid) )
-    return render(request, 'costomer_service/costomer_service.html',
-                  {'post': post})
-
-
-def board_list(request):
-    boards= Board.objects.all().order_by('-id')
-    return render(request, 'board_list.html', {"boards":boards})
+#
+#
+# def register(request):
+#     if request.method == 'GET':
+#         boardForm = BoardForm()
+#         return render(request, 'costomer_service/register.html', {'boardForm':boardForm})
+#     elif request.method == 'POST':
+#         boardForm = BoardForm(request.POST)
+#         if boardForm.is_valid():
+#             board = boardForm.save(commit=False)
+#             board.save()
+#             print('잘됌')
+#         if not boardForm.is_valid():
+#             print('안됌')
+#     return redirect('/costomer_service')
+#
+#
+# def notice(request):
+#     posts = Board.objects.all().order_by('-id')
+#     return render(request, 'costomer_service/costomer_service.html',
+#                       {'posts': posts})
+#
+# def read(request, bid):
+#     post = Board.objects.all( Q(id=bid) )
+#     return render(request, 'costomer_service/costomer_service.html',
+#                   {'post': post})
+#
+#
+# def board_list(request):
+#     boards= Board.objects.all().order_by('-id')
+#     return render(request, 'board_list.html', {"boards":boards})
 
 
 # 1:1 문의
