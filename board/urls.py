@@ -27,7 +27,7 @@ urlpatterns = [
     path('answer/create/<int:question_id>/',views.answer_create, name='answer_create'),
     path('question/create/', views.question_create, name='question_create'),
     path('n/', views.n_index, name='n_index'),
-    path('<int:notice_id>/', views.n_detail, name='n_detail'),
+    path('n/<int:notice_id>/', views.n_detail, name='n_detail'),
     path('answer/create/<int:notice_id>/', views.n_answer_create, name='n_answer_create'),
     path('notice/create/', views.notice_create, name='notice_create'),
 

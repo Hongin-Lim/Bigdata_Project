@@ -9,7 +9,7 @@ class BoardForm(forms.ModelForm) :
 
 from django import forms
 
-from board.models import Question, Answer, Comment, Notice
+from board.models import Question, Answer, Comment, Notice, Answer2
 
 
 class QuestionForm(forms.ModelForm):
@@ -41,6 +41,14 @@ class NoticeForm(forms.ModelForm):
 class AnswerForm(forms.ModelForm):
     class Meta:
         model = Answer
+        fields = ['content']
+        labels = {
+            'content': '답변내용',
+        }
+
+class AnswerForm2(forms.ModelForm):
+    class Meta:
+        model = Answer2
         fields = ['content']
         labels = {
             'content': '답변내용',

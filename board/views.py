@@ -53,7 +53,7 @@ def board_list(request):
 from django.shortcuts import render
 from .models import Question, Notice
 from django.utils import timezone
-from .forms import QuestionForm, AnswerForm, NoticeForm
+from .forms import QuestionForm, AnswerForm, NoticeForm, AnswerForm2
 
 def q_index(request):
     # 질문목록출력
@@ -70,7 +70,7 @@ def detail(request, question_id):
 # @login_required(login_url='common:login')
 def answer_create(request, question_id):
     """
-    pybo 답변등록
+    답변등록
     """
     question = get_object_or_404(Question, pk=question_id)
     if request.method == "POST":
@@ -121,11 +121,11 @@ def n_answer_create(request, notice_id):
     """
    답변등록
     """
-    notice = get_object_or_404(Question, pk=notice_id)
+    notice = get_object_or_404(Notice, pk=notice_id)
     if request.method == "POST":
-        n_form = AnswerForm(request.POST)
-        if n_form.is_valid():
-            answer = n_form.save(commit=False)
+        form = AnswerForm2(request.POST)
+        if form.is_valid():
+            answer = form.save(commit=False)
             # answer.author = request.user  # 추가한 속성 author 적용
             answer.create_date = timezone.now()
             answer.notice = notice
@@ -133,8 +133,8 @@ def n_answer_create(request, notice_id):
             return redirect('{}#answer_{}'.format(
                 resolve_url('board:n_detail', notice_id=notice.id), answer.id))
     else:
-        n_form = AnswerForm()
-    context = {'notice': notice, 'n_form': n_form}
+        form = AnswerForm2()
+    context = {'notice': notice, 'form': form}
     return render(request, 'cosmomer_service/notice_detail.html', context)
 
 def notice_create(request):
