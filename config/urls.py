@@ -24,9 +24,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', board.views.home2),
     path('costomer_service/', board.views.notice),
-    path('home/', board.views.home2),
+
     path('board/', include('board.urls')),
+    path('cart/', include('cart.urls')),
     path('shop/', include('shop.urls')),
+    path('home/', board.views.home2),
+
     # path('question/', board.views.q_index, name='q_index'),
     # path('question/<int:question_id>', board.views.detail, name='detail'),
     # path('answer/create/<int:question_id>', board.views.answer_create, name='answer_create'),

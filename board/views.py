@@ -32,10 +32,10 @@ def home2(request):
 #     return redirect('/costomer_service')
 #
 #
-# def notice(request):
-#     posts = Board.objects.all().order_by('-id')
-#     return render(request, 'costomer_service/costomer_service.html',
-#                       {'posts': posts})
+def notice(request):
+    posts = Board.objects.all().order_by('-id')
+    return render(request, 'costomer_service/costomer_service.html',
+                      {'posts': posts})
 #
 # def read(request, bid):
 #     post = Board.objects.all( Q(id=bid) )

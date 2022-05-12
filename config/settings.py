@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 
+import pymysql
+pymysql.install_as_MySQLdb()
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -42,7 +46,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'board',
     'shop',
-    'cart'
+    'cart',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -83,14 +88,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'verymarket',
+        'NAME': 'onlineshop',
         'USER': 'admin',
         'PASSWORD': 'qwer1234',
-        'HOST': '172.30.1.30',
+        'HOST': 'onlineshop.ch7xkffr79oy.ap-northeast-2.rds.amazonaws.com',
         'PORT': '3306',
-        'OPTIONS': {
-            'init_command': 'SET sql_mode="STRICT_TRANS_TABLES"'
-        }
     }
 }
 # DATABASES = {
@@ -138,8 +140,26 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
+AWS_ACCESS_KEY_ID = 'AKIA5KJJWZMBAVJJ5E7R'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_REGION = 'ap-northeast-2'
+AWS_STORAGE_BUCKET_NAME = 'verymarket'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.%s.amazonaws.com' % (AWS_STORAGE_BUCKET_NAME, AWS_REGION)
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+
+AWS_DEFAULT_ACL = 'public-read'
+
+AWS_LOCATION = 'static'
+
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CART_ID = 'cart_in_session'
+DEFAULT_FILE_STORAGE = 'config.asset_storage.MediaStorage'
