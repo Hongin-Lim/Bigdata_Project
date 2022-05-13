@@ -2,6 +2,13 @@
 
 {% block body %}
 
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--    {% block extra_style %}-->
+<!--    {% endblock %}-->
+</head>
 
 
 <table class="table table-striped">
@@ -38,17 +45,38 @@
         </tr>
         {% endwith %}
     {% endfor %}
-
-    <tr class="total">
-        <td>Total</td>
-        <td colspan="4"></td>
-        <td class="num">${{ cart.get_product_total|floatformat:"2" }}</td>
-    </tr>
-    </tbody>
-</table>
+ {% if cart.coupon %}
+            <tr class="subtotal">
+                <td>Subtotal</td>
+                <td colspan="4"></td>
+                <td >${{ cart.get_product_total }}</td>
+            </tr>
+            <tr>
+                <td>"{{ cart.coupon.code }}" coupon (${{ cart.coupon.amount }})</td>
+                <td colspan="4"></td>
+                <td >- ${{ cart.get_discount_total|floatformat:"2" }}</td>
+            </tr>
+        {% endif %}
+        <tr class="total">
+            <td>Total</td>
+            <td colspan="4"></td>
+            <td class="num">${{ cart.get_total_price|floatformat:"2" }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <p>
+        Add Coupon:
+    </p>
+    <form action='{% url "coupon:add" %}' method="post">
+        {{ add_coupon }}
+        <input type="submit" value="Add">
+        {% csrf_token %}
+    </form>
 
     <p class="text-right">
-        <a href="{% url 'shop:product_all' %}" class="btn btn-secondary">continue shopping</a>
-        </p>
-
+        <a href="{% url 'shop:product_all' %}" class="btn btn-secondary">계속 쇼핑하기</a>
+        <a href="{% url 'order:order_create' %}" class="btn btn-secondary">결제하기</a>
+    </p>
 {% endblock %}
+
+

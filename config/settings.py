@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 import pymysql
@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     'board',
     'shop',
     'cart',
-    'storages'
+    'storages',
+    'coupon',
+    'order'
 ]
 
 MIDDLEWARE = [
@@ -138,7 +140,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+# STATICFILES_DIRS = [BASE_DIR / 'static']
+
 
 AWS_ACCESS_KEY_ID = 'AKIA5KJJWZMBAVJJ5E7R'
 AWS_SECRET_ACCESS_KEY = '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'
@@ -155,6 +158,9 @@ AWS_LOCATION = 'static'
 
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -163,3 +169,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CART_ID = 'cart_in_session'
 DEFAULT_FILE_STORAGE = 'config.asset_storage.MediaStorage'
+
+IAMPORT_KEY = '7734942160534143'
+IAMPORT_SECRET = '513b808277bc8f90bfae4e3132ac4e5d5f117be0c379a7026655c96e73a213a3b09db41252e9af22'

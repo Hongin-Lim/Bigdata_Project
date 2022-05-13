@@ -32,7 +32,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to='product_images/%Y/%m/%d', blank=True)
     description = models.TextField(blank=True)
     meta_description = models.TextField(blank=True)
-    price = models.DecimalField(max_digits=10,decimal_places=2)
+    price = models.FloatField(max_length=10)
     stock = models.PositiveIntegerField()
     available_display = models.BooleanField('Display', default=True)
     available_order = models.BooleanField('Order', default=True)
@@ -47,4 +47,4 @@ class Product(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('shop:product_detail', args=[self.id ,self.slug])
+        return reverse('shop:product_detail', args=[self.id, self.slug])
