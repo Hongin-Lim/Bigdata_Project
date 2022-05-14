@@ -4,48 +4,46 @@
 
 <head>
     <meta charset="UTF-8">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<!--    {% block extra_style %}-->
-<!--    {% endblock %}-->
 </head>
 
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th scope="col">Image</th>
-            <th scope="col">Product</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Remove</th>
-            <th scope="col">Unit Price</th>
-            <th scope="col">Price</th>
-        </tr>
-    </thead>
-    <tbody>
+ <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Product</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Remove</th>
+                <th scope="col">Unit price</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
         {% for item in cart %}
             {% with product=item.product %}
-        <tr>
-            <th scope="row">
-                <a href="{{ product.get_absolute_url }}">
-                    <img src="{{ product.image.url }}" class="img-thumbnail">
-                </a>
-            </th>
-            <td>{{ product.name }}</td>
-            <td>
-                <form action="{% url 'cart:product_add' product.id %}" method="post">
-                    {{ add_to_cart }}
-                         {% csrf_token %}
-                    <input type="submit" class="btn btn-primary" value="Update">
-                </form>
-            </td>
-            <td><a href="{% url 'cart:product_remove' product.id %}">Remove</a></td>
-            <td class="num">${{ item.price }}</td>
-            <td class="num">${{ item.total_price }}</td>
-        </tr>
-        {% endwith %}
-    {% endfor %}
- {% if cart.coupon %}
+            <tr>
+                <th scope="row">
+                    <a href="{{ product.get_absolute_url }}">
+                        <img src="{{ product.image.url }}" class="img-thumbnail">
+                    </a>
+                </th>
+                <td>{{ product.name }}</td>
+                <td>
+                    <form action="{% url 'cart:product_add' product.id %}" method="post">
+                        {{ item.quantity_form.quantity }}
+                        {{ item.quantity_form.is_update }}
+                        <input type="submit" class="btn btn-primary" value="Update">
+                        {% csrf_token %}
+                    </form>
+                </td>
+                <td><a href="{% url 'cart:product_remove' product.id %}">Remove</a></td>
+                <td class="num">${{ item.price }}</td>
+                <td class="num">${{ item.total_price }}</td>
+            </tr>
+            {% endwith %}
+        {% endfor %}
+        {% if cart.coupon %}
             <tr class="subtotal">
                 <td>Subtotal</td>
                 <td colspan="4"></td>

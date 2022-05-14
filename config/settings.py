@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'cart',
     'storages',
     'coupon',
-    'order'
+    'order',
 ]
 
 MIDDLEWARE = [
@@ -139,7 +139,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 # STATICFILES_DIRS = [BASE_DIR / 'static']
 
 
@@ -166,9 +166,13 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_FILE_STORAGE = 'config.asset_storage.MediaStorage'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CART_ID = 'cart_in_session'
-DEFAULT_FILE_STORAGE = 'config.asset_storage.MediaStorage'
+
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
 
 IAMPORT_KEY = '7734942160534143'
 IAMPORT_SECRET = '513b808277bc8f90bfae4e3132ac4e5d5f117be0c379a7026655c96e73a213a3b09db41252e9af22'

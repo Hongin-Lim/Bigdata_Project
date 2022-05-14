@@ -24,12 +24,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', board.views.home2),
     path('costomer_service/', board.views.notice),
-
     path('board/', include('board.urls')),
     path('cart/', include('cart.urls')),
-    path('shop/', include('shop.urls')),
     path('coupon/', include('coupon.urls')),
     path('order/', include('order.urls')),
+    path('shop/', include('shop.urls')),
     path('home/', board.views.home2),
 
     # path('question/', board.views.q_index, name='q_index'),
