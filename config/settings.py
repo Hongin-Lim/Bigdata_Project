@@ -34,7 +34,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-# AUTH_USER_MODEL = 'user.User'
+AUTH_USER_MODEL = 'users.User'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'crispy_forms',
     'board',
     'shop',
@@ -50,6 +51,11 @@ INSTALLED_APPS = [
     'storages',
     'coupon',
     'order',
+    'users',
+    'allauth',  # 추가
+    'allauth.account',  # 추가
+    'allauth.socialaccount',  # 추가
+    'allauth.socialaccount.providers.kakao'  # 추가
 ]
 
 MIDDLEWARE = [
@@ -170,6 +176,11 @@ DEFAULT_FILE_STORAGE = 'config.asset_storage.MediaStorage'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CART_ID = 'cart_in_session'
 
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
