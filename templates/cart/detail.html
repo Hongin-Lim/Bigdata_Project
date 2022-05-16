@@ -33,7 +33,7 @@
                     <form action="{% url 'cart:product_add' product.id %}" method="post">
                         {{ item.quantity_form.quantity }}
                         {{ item.quantity_form.is_update }}
-                        <input type="submit" class="btn btn-primary" value="Update">
+                        <input type="submit" class="btn btn-primary" value="수량 수정">
                         {% csrf_token %}
                     </form>
                 </td>
@@ -63,7 +63,7 @@
         </tbody>
     </table>
     <p>
-        Add Coupon:
+        쿠폰 등록하기:
     </p>
     <form action='{% url "coupon:add" %}' method="post">
         {{ add_coupon }}
