@@ -14,11 +14,7 @@ from users.forms import signupForm
 
 
 # Create your views here.
-def home(request):
-    return render(request, 'home/base.html')
 
-def home2(request):
-    return render(request, 'home/mainpage.html')
 # def home3(request):
 #     return render(request, 'home/mainpage_logined.html')
 # def login(request):
@@ -65,12 +61,12 @@ def userlogin(request):
         if loginForm.is_valid():
             print('로그인 성공')
             auth_login(request, loginForm.get_user())
-            return redirect('/home3')
+            return redirect('/')
         else:
             print('로그인 실패')
             return render(request,'login/error.html')
 
 def userlogout(request):
     auth_logout(request)
-    return redirect('/home2')
+    return redirect('/')
 

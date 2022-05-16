@@ -1,6 +1,6 @@
 {% extends 'home/base.html' %}
 {% load static %}
-{% block content %}
+{% block body %}
 <div id="wrap" class="">
     <div id="pos_scroll"></div>
     <div id="container">
@@ -20,16 +20,13 @@
                                     <input type="password" name="password" size="20" tabindex="2" value=""
                                            placeholder="비밀번호를 입력해주세요">
                                     <div class="checkbox_save">
-
                                         <div class="login_search">
                                             <a class="link"
-                                               onclick="KurlyTrackerLink('/member/find/id', 'select_find_id')"
                                                href="#none">
                                                 아이디 찾기
                                             </a>
                                             <span class="bar"></span>
                                             <a class="link"
-                                               onclick="KurlyTrackerLink('/member/find/password', 'select_find_password')"
                                                href="#none">
                                                 비밀번호 찾기
                                             </a>
@@ -43,11 +40,7 @@
                                    href="/login/register">
                                     <span class="txt_type">회원가입</span>
                                 </a>
-                                {% if user.is_authenticated %}
-                                <a href="{% url 'account_logout' %}">카카오 로그아웃 </a>
-                                {% else %}
-                                <a href="{% url 'account_login' %}">카카오 로그인 </a>
-                                {% endif %}
+
                             </div>
                         </div>
                     </div>

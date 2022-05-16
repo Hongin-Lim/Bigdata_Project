@@ -26,7 +26,7 @@ urlpatterns = [
     path('logout/', users.views.userlogout),
     path('signup/', users.views.signup),
     # path('costomer_service/', board.views.notice),
-
+    # path('mypage/', include('users.urls')),
     path('board/', include('board.urls')),
     path('cart/', include('cart.urls')),
     path('coupon/', include('coupon.urls')),
