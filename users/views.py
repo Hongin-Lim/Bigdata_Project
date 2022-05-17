@@ -3,6 +3,7 @@ import json
 from django.contrib import auth
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, SetPasswordForm
 # from django.contrib.auth.models import User
 from users.models import User
@@ -14,11 +15,7 @@ from users.forms import signupForm
 
 
 # Create your views here.
-def home(request):
-    return render(request, 'home/base.html')
 
-def home2(request):
-    return render(request, 'home/mainpage.html')
 # def home3(request):
 #     return render(request, 'home/mainpage_logined.html')
 # def login(request):
@@ -65,12 +62,26 @@ def userlogin(request):
         if loginForm.is_valid():
             print('로그인 성공')
             auth_login(request, loginForm.get_user())
-            return redirect('/home3')
+            return redirect('/')
         else:
             print('로그인 실패')
             return render(request,'login/error.html')
 
+@login_required
 def userlogout(request):
     auth_logout(request)
-    return redirect('/home2')
+    return redirect('/')
+
+
+@login_required
+def kakao_logout(request):
+    """
+    카카오톡과 함께 로그아웃 처리
+    """
+    kakao_rest_api_key = '9f3d88106a97581bcd1a61ba5942473b'
+    print(kakao_rest_api_key)
+    logout_redirect_uri = "http://127.0.0.1:8000/logout/"
+    state = "none"
+    kakao_service_logout_url = "https://kauth.kakao.com/oauth/logout"
+    return redirect(f"{kakao_service_logout_url}?client_id={kakao_rest_api_key}&logout_redirect_uri={logout_redirect_uri}&state={state}")
 

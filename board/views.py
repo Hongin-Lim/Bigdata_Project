@@ -7,13 +7,17 @@ from django.views.generic import CreateView
 
 from board.forms import BoardForm
 from board.models import Board
+from shop.models import Product
 
 
 def home(request):
     return render(request, 'home/base.html')
 
 def home2(request):
-    return render(request, 'home/mainpage.html')
+    products = Product.objects.filter(available_display=True)
+
+
+    return render(request, 'home/mainpage.html', {'products':products})
 
 #
 #
