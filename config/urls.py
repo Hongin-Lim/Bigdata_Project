@@ -17,19 +17,25 @@ from django.contrib import admin
 from django.urls import path, include
 
 import board.views
-
-# app_name = 'board'
+import users.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('', board.views.home2),
-    path('costomer_service/', board.views.notice),
+    path('login/', users.views.userlogin),
+    path('logout/', users.views.userlogout),
+    path('kakao_logout', users.views.kakao_logout),
+    path('signup/', users.views.signup),
+    # path('costomer_service/', board.views.notice),
+    # path('mypage/', include('users.urls')),
     path('board/', include('board.urls')),
     path('cart/', include('cart.urls')),
     path('coupon/', include('coupon.urls')),
     path('order/', include('order.urls')),
     path('shop/', include('shop.urls')),
-    path('home/', board.views.home2),
+
+
 
     # path('question/', board.views.q_index, name='q_index'),
     # path('question/<int:question_id>', board.views.detail, name='detail'),

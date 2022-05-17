@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
+import secrets
 from pathlib import Path
 
 import pymysql
@@ -34,7 +35,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-# AUTH_USER_MODEL = 'user.User'
+AUTH_USER_MODEL = 'users.User'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -43,13 +44,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms',
+    'django.contrib.sites',
+    # 'crispy_forms',
     'board',
     'shop',
     'cart',
     'storages',
     'coupon',
     'order',
+    'users',
+    'allauth',  # 추가
+    'allauth.account',  # 추가
+    'allauth.socialaccount',  # 추가
+    'allauth.socialaccount.providers.kakao'  # 추가
 ]
 
 MIDDLEWARE = [
@@ -171,8 +178,14 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CART_ID = 'cart_in_session'
 
 
-SITE_ID = 1
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+SITE_ID = 3
 LOGIN_REDIRECT_URL = '/'
 
 IAMPORT_KEY = '7734942160534143'
 IAMPORT_SECRET = '513b808277bc8f90bfae4e3132ac4e5d5f117be0c379a7026655c96e73a213a3b09db41252e9af22'
+

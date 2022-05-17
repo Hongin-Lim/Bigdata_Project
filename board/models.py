@@ -18,11 +18,13 @@
 
 # 'member.BoardMember',
 
-from django.contrib.auth.models import User
+
 from django.db import models
 
 # Create your models here.
 from config import settings
+from users.models import User
+
 
 class Question(models.Model):
     # author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='author_question')
