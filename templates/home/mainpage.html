@@ -61,15 +61,17 @@
               <div class="product-box">
                 <ul class="recommend-items">
                   <li>
-                    <a href="#" class="recommend-product-image image-hover"></a>
+                                {% for product in products %}
+                    <a href="#" class="recommend-product-image image-hover" src=""></a>
                     <a href="#">
-                      <h3 class="product-name">아스파라거스 200g</h3>
+                      <h3 class="product-name">{{product.name}}</h3>
                     </a>
                     <div class="product-price">
                       <strong class="discount-rate">10%</strong>
                       <strong class="final-price">25,110원</strong>
                       <span class="regular-price">27,900원</span>
                     </div>
+                    {% endfor %}
                   </li>
                   <li>
                     <a href="#" class="recommend-product-image image-hover"></a>
