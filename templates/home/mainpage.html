@@ -18,273 +18,50 @@
                 <ul class="slide-items">
                     <li class="slide-content">
                         <a href="#" class="slide01"
-                           style="background-image: url(https://img-cf.kurly.com/banner/main/pc/img/6df2a0bf-63c3-404c-8326-761b77537b33"
-                           );></a>
+                           style="background-image: url(https://verymarket.s3.ap-northeast-2.amazonaws.com/static/assets/very_logo.png
+                           );"></a>
                     </li>
                     <li class="slide-content">
                         <a href="#" class="slide02"
-                           style="background-image: url(https://img-cf.kurly.com/banner/main/pc/img/9cac0ce1-b86c-467e-9d85-1239eb11de4e"
-                           );></a>
-                    </li>
-                    <li class="slide-content">
-                        <a href="#" class="slide03"></a>
-                    </li>
-                    <li class="slide-content">
-                        <a href="#" class="slide04"></a>
-                    </li>
-                    <li class="slide-content">
-                        <a href="#" class="slide05"></a>
-                    </li>
-                    <li class="slide-content">
-                        <a href="#" class="slide06"></a>
-                    </li>
-                    <li class="slide-content">
-                        <a href="#" class="slide07"></a>
-                    </li>
-                    <li class="slide-content">
-                        <a href="#" class="slide08"></a>
-                    </li>
-                    <li class="slide-content">
-                        <a href="#" class="slide09"></a>
+                           style="background-image: url(https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/2Afk/image/FMTKGDV8rDqN6-nJwqwl_gjadFI.jpg
+                           );"></a>
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="button-direction">
-            <button type="button" class="prev-button"></button>
-            <button type="button" class="next-button"></button>
         </div>
     </section>
 
     <section class="recommendation section">
         <div class="container">
-            <h2 class="title">이 상품 어때요?</h2>
-
+            <h2 class="title">이 과일 어때요?</h2>
             <div class="product-slide">
                 <div class="product-slide-wrap">
                     <div class="product-box">
                         <ul class="recommend-items">
+                            {% for product in products %}
                             <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
+
+                                <a href="#" class="recommend-product-image image-hover">
+                                    <img class="card-img-top"
+                                         src="{{product.image.url}}"
+                                         alt="Product Image">
+                                </a>
                                 <a href="#">
-                                    <h3 class="product-name">아스파라거스 200g</h3>
+                                    <h3 class="product-name">{{product.name}}</h3>
                                 </a>
                                 <div class="product-price">
-                                    <strong class="discount-rate">10%</strong>
-                                    <strong class="final-price">25,110원</strong>
-                                    <span class="regular-price">27,900원</span>
+                                    <strong class="discount-rate">할인률: 10%</strong>
                                 </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[풀무원] 생면식감 꽃게탕면</h3>
-                                </a>
+                                &ensp;
                                 <div class="product-price">
-                                    <strong class="discount-rate">10%</strong>
-                                    <strong class="final-price">25,110원</strong>
-                                    <span class="regular-price">27,900원</span>
+                                    <strong class="final-price">현재가: {{product.price}} 원</strong>
                                 </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">GAP 사과 한 봉지 5~6입</h3>
-                                    <!--                        <img src="{% static 'assets/menuimg/kf365.jpg' %}" alt="" />-->
-                                </a>
+                                &ensp;
                                 <div class="product-price">
-                                    <strong class="discount-rate">10%</strong>
-                                    <strong class="final-price">25,110원</strong>
-                                    <span class="regular-price">27,900원</span>
+                                    <span class="regular-price">할인가격: 27,900원</span>
                                 </div>
                             </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [제주돼지] 제주 흑돼지 목살 300g (냉장)
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">10%</strong>
-                                    <strong class="final-price">25,110원</strong>
-                                    <span class="regular-price">27,900원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[Everyday] 시래기 된장국</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">5%</strong>
-                                    <strong class="final-price">3,800원</strong>
-                                    <span class="regular-price">4,000원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[바버] 1833 체다치즈</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">15%</strong>
-                                    <strong class="final-price">8,245원</strong>
-                                    <span class="regular-price">9,700원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[청오건강] 유기농 쌀가루</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">10%</strong>
-                                    <strong class="final-price">3,330원</strong>
-                                    <span class="regular-price">3,700원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[KF365] 아보카도 1개</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">10%</strong>
-                                    <strong class="final-price">2,241원</strong>
-                                    <span class="regular-price">2,490원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[솔가] 아연 (100일분)</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">35%</strong>
-                                    <strong class="final-price">21,450원</strong>
-                                    <span class="regular-price">33,000원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[자연에찬] 족발 슬라이스</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">10%</strong>
-                                    <strong class="final-price">7,200원</strong>
-                                    <span class="regular-price">8,000원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[그랑도르즈] 까망베르 2종</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">11,900원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">친환경 쑥갓 150g</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">10%</strong>
-                                    <strong class="final-price">1,530원</strong>
-                                    <span class="regular-price">1,700원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[동트는농가] 청국장 찌개</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">2%</strong>
-                                    <strong class="final-price">4,180원</strong>
-                                    <span class="regular-price">4,300원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[우리밀] 두부과자</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">2%</strong>
-                                    <strong class="final-price">2,240원</strong>
-                                    <span class="regular-price">2,300원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[콜린스그린] 더 자몽</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">10%</strong>
-                                    <strong class="final-price">14,940원</strong>
-                                    <span class="regular-price">16,600원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[프란시아] 모짜렐라 부팔라</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">20%</strong>
-                                    <strong class="final-price">6,240원</strong>
-                                    <span class="regular-price">7,800원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">친환경 파채 200g</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">5%</strong>
-                                    <strong class="final-price">2,470원</strong>
-                                    <span class="regular-price">2,600원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[Everyday] 새우 브로콜리죽</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">5%</strong>
-                                    <strong class="final-price">5,700원</strong>
-                                    <span class="regular-price">6,000원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[새로미부산어묵] 게맛살</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">3%</strong>
-                                    <strong class="final-price">5,200원</strong>
-                                    <span class="regular-price">5,400원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="recommend-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[상하목장] 유기농 우유</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">20%</strong>
-                                    <strong class="final-price">5,680원</strong>
-                                    <span class="regular-price">7,100원</span>
-                                </div>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
@@ -297,30 +74,6 @@
         </div>
     </section>
 
-    <section class="today-sale section">
-        <div class="today-sale-detail">
-            <h2 class="sale-title title">일일특가</h2>
-            <p class="sale-desc">3월, 한 달간 진행되는 24시간 한정 특가</p>
-            <span class="sale-alarm">망설이면 늦어요!</span>
-        </div>
-
-        <div class="today-sale-product">
-            <a href="#" class="sale-product-image image-hover">
-            <span class="sale-timer">
-              <strong></strong>
-              남음
-            </span>
-            </a>
-
-            <div class="sale-product-detail">
-                <h3 class="sale-product-name">[허쉬] 후퍼스 밀크팩 340g</h3>
-                <span class="sale-product-desc">달콤 바삭한 이색 초코볼</span>
-                <strong class="discount-rate">55%</strong>
-                <strong class="final-price">3,105원</strong>
-                <span class="regular-price">6,900원</span>
-            </div>
-        </div>
-    </section>
 
     <section class="event section">
         <div class="container">
@@ -359,116 +112,6 @@
         </div>
     </section>
 
-    <section class="cheap section">
-        <div class="container">
-            <a href="#">
-                <h2 class="title">
-                    알뜰 상품
-                    <button type="button" class="title-arrow"></button>
-                </h2>
-            </a>
-
-            <div class="product-slide">
-                <div class="product-slide-wrap">
-                    <div class="product-box">
-                        <ul class="cheap-items">
-                            <li>
-                                <a href="#" class="cheap-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [셀퓨전씨] 트리악 모공 톡스 패드 60매
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">5%</strong>
-                                    <strong class="final-price">15,675원</strong>
-                                    <span class="regular-price">16,500원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="cheap-product-image image-hover">
-                                    <div class="giveaway">증정품</div>
-                                </a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [헤드스파7] 파란눈 블랙 헤어팩 200ml
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">20%</strong>
-                                    <strong class="final-price">10,000원</strong>
-                                    <span class="regular-price">12,500원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="cheap-product-image image-hover">
-                                    <div class="giveaway">증정품</div>
-                                </a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [미쟝센] 퍼펙트세럼 오리지널 80ml
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">15%</strong>
-                                    <strong class="final-price">5,525원</strong>
-                                    <span class="regular-price">6,500원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="cheap-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [한미양행] 눈부신 비타민D 4000IU (90일분)
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">40%</strong>
-                                    <strong class="final-price">8,940원</strong>
-                                    <span class="regular-price">14,900원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="cheap-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[소중한식사] 양념 장어구이</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">30%</strong>
-                                    <strong class="final-price">10,850원</strong>
-                                    <span class="regular-price">15,500원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="cheap-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [미자언니네] 고구마 단호박 샐러드
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">20%</strong>
-                                    <strong class="final-price">4,240원</strong>
-                                    <span class="regular-price">5,300원</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-button-direction">
-                <button type="button" class="cheap-prev-button"></button>
-                <button type="button" class="cheap-next-button"></button>
-            </div>
-        </div>
-    </section>
-
-    <section class="banner">
-        <div class="container">
-            <a href="#" class="banner-festa"></a>
-        </div>
-    </section>
 
     <section class="md-recommend section">
         <div class="container">
@@ -632,103 +275,6 @@
         </div>
     </section>
 
-    <section class="new-product section">
-        <div class="container">
-            <a href="#">
-                <h2 class="title">
-                    오늘의 신상품
-                    <button type="button" class="title-arrow"></button>
-                </h2>
-                <span class="new-product-desc"
-                >매일 정오, 컬리의 새로운 상품을 만나보세요</span
-                >
-            </a>
-
-            <div class="product-slide">
-                <div class="product-slide-wrap">
-                    <div class="product-box">
-                        <ul class="new-items">
-                            <li>
-                                <a href="#" class="new-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        한철승 농부의 고당도 성전 감귤 800g
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">13,800원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="new-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">[비올란타] 멀티씨드 쿠키 2종</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">4,500원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="new-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [하림] 무항생제 닭가슴살 다짐육
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">7,500원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="new-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [룰루키친] DOG 닭고기 화식 2종
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">10%</strong>
-                                    <strong class="final-price">6,480원</strong>
-                                    <span class="regular-price">7,200원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="new-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [아이배냇] 떠먹는 자색고구마와 푸룬
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">10%</strong>
-                                    <strong class="final-price">6,480원</strong>
-                                    <span class="regular-price">7,200원</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="new-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [해원에스디] 부세굴비 2마리(냉장)
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">10%</strong>
-                                    <strong class="final-price">11,700원</strong>
-                                    <span class="regular-price">13,000원</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-button-direction">
-                <button type="button" class="new-prev-button"></button>
-                <button type="button" class="new-next-button"></button>
-            </div>
-        </div>
-    </section>
 
     <section class="popular-product section">
         <div class="container">
@@ -831,239 +377,6 @@
         </div>
     </section>
 
-    <section class="must-have-product section">
-        <div class="container">
-            <a href="#">
-                <h2 class="title">
-                    늘 기분 좋은 가격
-                    <button type="button" class="title-arrow"></button>
-                </h2>
-                <span class="must-have-product-desc"
-                >가격부터 늘 기분 좋은 컬리 장바구니 필수템
-            </span>
-            </a>
-
-            <div class="product-slide">
-                <div class="product-slide-wrap">
-                    <div class="product-box">
-                        <ul class="must-items">
-                            <li>
-                                <a href="#" class="must-have-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [연세우유 x 마켓컬리] 전용목장우유
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">1,980원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="must-have-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [종가집] 아침에on 국산콩 고소한 두부 반모 2종
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">2,200원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="must-have-product-image image-hover">
-                                    <div class="coupon">20%농할쿠폰</div>
-                                </a>
-                                <a href="#">
-                                    <h3 class="product-name">[KF365] 애호박 1개</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">1,980원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="must-have-product-image image-hover">
-                                    <div class="coupon">20%농할쿠폰</div>
-                                </a>
-                                <a href="#">
-                                    <h3 class="product-name">[KF365] 깐마늘 200g</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">2,200원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="must-have-product-image image-hover">
-                                </a>
-                                <a href="#">
-                                    <h3 class="product-name">맛타리 버섯 200g</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">1,000원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="must-have-product-image image-hover">
-                                </a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [맑은물에] 참좋은 국산콩 순두부
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">1,500원</strong>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-button-direction">
-                <button type="button" class="must-prev-button"></button>
-                <button type="button" class="must-next-button"></button>
-            </div>
-        </div>
-    </section>
-
-    <section class="offline-restaurant section">
-        <div class="container">
-            <a href="#">
-                <h2 class="title">
-                    오프라인 맛집
-                    <button type="button" class="title-arrow"></button>
-                </h2>
-            </a>
-
-            <div class="product-slide">
-                <div class="product-slide-wrap">
-                    <div class="product-box">
-                        <ul class="offline-items">
-                            <li>
-                                <a href="#" class="offline-product-image image-hover"> </a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [소이연남] 태국 소고기 쌀국수
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">7,500원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="offline-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">홍제동 사랑의집 떡볶이</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">5,400원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="offline-product-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">
-                                        [광화문 미진] 비빔메밀 (2인분)
-                                    </h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">8,900원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="offline-product-image image-hover"> </a>
-                                <a href="#">
-                                    <h3 class="product-name">[가나안덕] 오리 양념 갈비</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">9,900원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="offline-product-image image-hover"> </a>
-                                <a href="#">
-                                    <h3 class="product-name">[사미헌] 갈비탕</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="final-price">11,000원</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="offline-product-image image-hover"> </a>
-                                <a href="#">
-                                    <h3 class="product-name">[고래사] 스페셜 어묵 4종</h3>
-                                </a>
-                                <div class="product-price">
-                                    <strong class="discount-rate">10%</strong>
-                                    <strong class="final-price">2,250원</strong>
-                                    <span class="regular-price">2,500원</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-button-direction">
-                <button type="button" class="offline-prev-button"></button>
-                <button type="button" class="offline-next-button"></button>
-            </div>
-        </div>
-    </section>
-
-    <section class="recipe section">
-        <div class="container">
-            <a href="#">
-                <h2 class="title">
-                    컬리의 레시피
-                    <button type="button" class="title-arrow"></button>
-                </h2>
-            </a>
-
-            <div class="product-slide">
-                <div class="product-slide-wrap">
-                    <div class="product-box">
-                        <ul class="recipe-items">
-                            <li>
-                                <a href="#" class="recipe-image image-hover"> </a>
-                                <a href="#">
-                                    <h3 class="product-name">메밀 갈레트</h3>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="recipe-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">플랫 브레드 루꼴라 피자</h3>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="recipe-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">시금치 페스토 파스타</h3>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="recipe-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">황태양념구이</h3>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="recipe-image image-hover"></a>
-                                <a href="#">
-                                    <h3 class="product-name">도다리 양념구이</h3>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-button-direction">
-                <button type="button" class="recipe-prev-button"></button>
-                <button type="button" class="recipe-next-button"></button>
-            </div>
-        </div>
-    </section>
 
     <section class="review section">
         <div class="container">

@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
+import secrets
 from pathlib import Path
 
 import pymysql
@@ -182,8 +183,9 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-SITE_ID = 1
+SITE_ID = 3
 LOGIN_REDIRECT_URL = '/'
 
 IAMPORT_KEY = '7734942160534143'
 IAMPORT_SECRET = '513b808277bc8f90bfae4e3132ac4e5d5f117be0c379a7026655c96e73a213a3b09db41252e9af22'
+

@@ -21,9 +21,11 @@ import users.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('', board.views.home2),
     path('login/', users.views.userlogin),
     path('logout/', users.views.userlogout),
+    path('kakao_logout', users.views.kakao_logout),
     path('signup/', users.views.signup),
     # path('costomer_service/', board.views.notice),
     # path('mypage/', include('users.urls')),
@@ -32,6 +34,7 @@ urlpatterns = [
     path('coupon/', include('coupon.urls')),
     path('order/', include('order.urls')),
     path('shop/', include('shop.urls')),
+
 
 
     # path('question/', board.views.q_index, name='q_index'),

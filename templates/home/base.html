@@ -52,9 +52,10 @@
         </div>
         <ul class="customers-items">
             {% if request.user.is_authenticated %}
-            <div type="text" >{{ user.u_id }} 님 welcome !</div>
+            <div type="text" >{{ user.username }} 님 welcome !</div>
             &ensp;&ensp;&ensp;
             <li ><a href="/logout">로그아웃</a></li>
+            <li ><a href="/kakao_logout">카카오로그아웃</a></li>
             &ensp;&ensp;&ensp;
             <li ><a href="/mypage">마이페이지</a></li>
             &ensp;
