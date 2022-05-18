@@ -53,12 +53,13 @@
         <ul class="customers-items">
             {% if request.user.is_authenticated %}
             <div type="text" >{{ user.username }} 님 welcome !</div>
-            &ensp;&ensp;&ensp;
-            <li ><a href="/logout">로그아웃</a></li>
+            &nbsp;
+<!--            <li ><a href="/logout">로그아웃</a></li>-->
+
             <li ><a href="/kakao_logout">카카오로그아웃</a></li>
-            &ensp;&ensp;&ensp;
+            &nbsp;
             <li ><a href="/mypage">마이페이지</a></li>
-            &ensp;
+            &nbsp;
             {% else %}
             <li class="sign-up-item"><a href="/signup">회원가입</a></li>
             <li class="sign-in-item"><a href="/login">로그인</a></li>
