@@ -1,6 +1,7 @@
 {% extends 'home/base.html' %}
 {% load static %}
-{% block content %}
+{% block body %}
+{% load socialaccount %}
 <div id="wrap" class="">
     <div id="pos_scroll"></div>
     <div id="container">
@@ -20,16 +21,13 @@
                                     <input type="password" name="password" size="20" tabindex="2" value=""
                                            placeholder="비밀번호를 입력해주세요">
                                     <div class="checkbox_save">
-
                                         <div class="login_search">
                                             <a class="link"
-                                               onclick="KurlyTrackerLink('/member/find/id', 'select_find_id')"
                                                href="#none">
                                                 아이디 찾기
                                             </a>
                                             <span class="bar"></span>
                                             <a class="link"
-                                               onclick="KurlyTrackerLink('/member/find/password', 'select_find_password')"
                                                href="#none">
                                                 비밀번호 찾기
                                             </a>
@@ -40,15 +38,24 @@
                                     </button>
                                 </form>
                                 <a class="btn_type2 btn_member"
-                                   href="/login/register">
+                                   href="/signup">
                                     <span class="txt_type">회원가입</span>
                                 </a>
-                                {% if user.is_authenticated %}
-                                <a href="{% url 'account_logout' %}">카카오 로그아웃 </a>
-                                {% else %}
-                                <a href="{% url 'account_login' %}">카카오 로그인 </a>
-                                {% endif %}
+                                &ensp;
+                                &ensp;
+                                <div>
+                                    <a href="{% provider_login_url 'kakao' %}">
+                                        <img src="//k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg"
+                                             width="200" alt="카카오 로그인 버튼"/>
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
