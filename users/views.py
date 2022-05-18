@@ -13,18 +13,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 import requests
 from users.forms import signupForm
 
-
-# Create your views here.
-
-# def home3(request):
-#     return render(request, 'home/mainpage_logined.html')
-# def login(request):
-#     return render(request, 'login/login_page.html')
-#
-# def signup_page(request):
-#     return render(request, 'login/sign_up.html')
-
-
+# 마이페이지 (장바구니)
+def mypage(request):
+    return render(request, 'cart/detail.html')
 
 # 회원가입
 def signup(request):
