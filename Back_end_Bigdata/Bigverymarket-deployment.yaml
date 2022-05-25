@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-nginx-deployment2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: django-nginx2
+  template:
+    metadata:
+      labels:
+        app: django-nginx2
+    spec:
+      containers:
+        - name: django-nginx2
+          image: lhi90/verymarket-bigdata:0.1
+          ports:
+            - containerPort: 8000
+          imagePullPolicy: Always
+          env:
+            - name: DATE
+              value: 'DATE_STRING'
+      imagePullSecrets:
+        - name: my-secret
