@@ -100,7 +100,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="pycon2017ModalLabel">파이썬으로 통계업무 자동화하기</h5>
+                <h5 class="modal-title" id="pycon2017ModalLabel">VeryMarket 쇼핑몰</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -111,12 +111,12 @@
                         <img class="img-fluid" src="{% static 'single_pages/images/pycon_sy_2017.png' %}">
                     </div>
                     <div class="col-lg-5">
-                        <p>Python, Django, Pandas, python-docx로 통계업무 자동화한 내용을 파이콘에서 발표했습니다.</p>
+                        <p>신선한 과일을 빅데이터 분석을 통한 최저가로 구매 하실 수 있는 쇼핑몰 입니다.</p>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
             </div>
         </div>
     </div>
@@ -126,7 +126,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id=" inflearnDjangoModalLabel">파이썬 사용자를 위한 웹개발 입문 A to Z Django + Bootstrap</h5>
+                <h5 class="modal-title" id=" inflearnDjangoModalLabel">VeryMarket 빅데이터</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -137,13 +137,13 @@
                         <img class="img-fluid" src="{% static 'single_pages/images/inflearn_django2.png' %}">
                     </div>
                     <div class="col-lg-5">
-                        <p>파이썬 초보를 대상으로 한 웹개발 강좌입니다. 인프런에서 서비스하고 있습니다.</p>
-                        <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> 인프런</button>
+                        <p>물동량, 가격동향, 주요 품목 실시간 가격, 농업 실시간 기상정보, 베리마켓 인기상품 TOP10 등 분석사이트</p>
+                        <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> 베리마켓</button>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
             </div>
         </div>
     </div>
@@ -154,7 +154,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id=" automationPythonModalLabel">직장인을 위한 프로그래밍 입문과 업무자동화 활용</h5>
+                <h5 class="modal-title" id=" automationPythonModalLabel">VeryMarket 흐름도</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -165,13 +165,13 @@
                         <img class="img-fluid" src="{% static 'single_pages/images/automation_python.png' %}">
                     </div>
                     <div class="col-lg-5">
-                        <p>코딩에 대해 아무것도 모르는 직장인들도 쉽게 프로그래밍의 기본 개념과 문법을 실습을 통해 배우고, 파일 입출력, 엑셀 데이터 처리, MS-word 문서 자동으로 만들기, 그래프 그리기, 웹스크래핑 등을 배웁니다.</p>
-                        <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> 인프런</button>
+                        <p>Python, Django, Jenkins, K8S, ELK Stack, Hadoop, Spark, Zeppelin, S3(mysql), RDS 등</p>
+                        <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> 베리마켓</button>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
             </div>
         </div>
     </div>
@@ -193,6 +193,24 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
+<!--카카오 지도 API-->
 
+<center><div class="map-container" tabindex="0" style="position: relative; overflow: hidden; background: url(&quot;https://ssl.pstatic.net/static/maps/mantle/1x/pattern_1.png&quot;) 0px 0px repeat transparent;">
+	<div id="map" style="width:1500px;height:700px;, text-alien:center"></div>
+</div></center>
+
+
+
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1cb434b755e84b325c53ed6dd498f8d3"></script>
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(37.47544629999994, 126.87321439999977),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+	</script>
+    </div>
 </body>
 </html>
