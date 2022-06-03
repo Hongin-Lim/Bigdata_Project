@@ -55,7 +55,13 @@
 * [API.xlsx](https://docs.google.com/viewer?url=https://github.com/Hongin-Lim/Bigdata_Project/blob/main/files/API.xlsx?raw=True)
 
 ## :link: ERD 설계
-*![ERD](https://user-images.githubusercontent.com/97941148/166879977-4f215cd5-3dc9-4b57-a97f-1969e5937569.png)
+![ERD(0603)](https://user-images.githubusercontent.com/97941148/171774800-8ae454f9-8a12-4e25-baba-691447e56ead.PNG) 
+***
+* 확대 1)
+![erd 확대1](https://user-images.githubusercontent.com/97941148/171774839-437ba554-9b52-48ab-b3b5-1e5fe11ad3de.PNG) 
+***
+* 확대 2)
+![erd 확대2](https://user-images.githubusercontent.com/97941148/171774851-13aa6ce6-0828-45fb-8164-81b82d8f4fc5.PNG) <br>
 
 ## :link: WBS
 * [WBS.xlsx](https://docs.google.com/viewer?url=https://github.com/Hongin-Lim/Bigdata_Project/blob/main/files/WBS(0603).xlsx?raw=True)
