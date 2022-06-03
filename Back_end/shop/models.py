@@ -1,6 +1,8 @@
 from django.db import models
 from django.shortcuts import resolve_url
+from config import settings
 from django.urls import reverse
+from users.models import User
 # from django.shortcuts import resolve_url
 # Create your models here.
 # Category - 중첩, 레벨이 있게
@@ -32,19 +34,29 @@ class Product(models.Model):
     image = models.ImageField(upload_to='product_images/%Y/%m/%d', blank=True)
     description = models.TextField(blank=True)
     meta_description = models.TextField(blank=True)
-    price = models.FloatField(max_length=10)
+    price = models.DecimalField(decimal_places=0, max_digits=10)
     stock = models.PositiveIntegerField()
     available_display = models.BooleanField('Display', default=True)
     available_order = models.BooleanField('Order', default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
+    like = models.ManyToManyField(settings.AUTH_USER_MODEL,related_name='likes', blank=True)
+
 
     class Meta:
         ordering = ['-created']
         index_together = [['id','slug']]
 
     def __str__(self):
-        return self.name
+        return self.name + ' '
 
     def get_absolute_url(self):
         return reverse('shop:product_detail', args=[self.id, self.slug])
+
+
+class review(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    contents=models.TextField()
+    star=models.IntegerField()
+    create_date = models.DateTimeField(auto_now_add=True)
+    product=models.ForeignKey(Product,on_delete=models.CASCADE)
