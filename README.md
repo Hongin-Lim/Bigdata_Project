@@ -1,4 +1,4 @@
-# 🍓 빅데이터 활용 과일 팀구매 쇼핑몰 개발 프로젝트(VeryMarket) 
+# 🍓 빅데이터 활용 과일 구매 쇼핑몰 개발 프로젝트(VeryMarket) 
 
 ## :clipboard: 개발환경
 * Linux
@@ -61,4 +61,4 @@
 * [WBS.xlsx](https://docs.google.com/viewer?url=https://github.com/Hongin-Lim/Bigdata_Project/blob/main/files/WBS.xlsx?raw=True)
 
 ## :link: 서비스 아키텍쳐
-![image](https://user-images.githubusercontent.com/96184680/168993141-646987f3-9e21-426a-ab84-55c6395e5a69.png)
+![image](https://user-images.githubusercontent.com/97823665/170420473-9a7d6da6-850e-448a-ba62-b64256680777.png)
