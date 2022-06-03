@@ -16,7 +16,7 @@
 ### DB
 #### <img src="https://img.shields.io/badge/MySQL-29B6F6?style=flat-square&logo=Mysql&logoColor=white"/>
 
-#### AWS
+### AWS
 #### <img src="https://img.shields.io/badge/EC2-FFEE58?style=flat-square&logo=EC2&logoColor=white"/> <img src="https://img.shields.io/badge/RDS-FFEE58?style=flat-square&logo=EC2&logoColor=white"/> <img src="https://img.shields.io/badge/Amazon S3-FFEE58?style=flat-square&logo=Amazon S3&logoColor=white"/>
 
 ### 프론트엔드
