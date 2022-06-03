@@ -58,7 +58,7 @@
 *![ERD](https://user-images.githubusercontent.com/97941148/166879977-4f215cd5-3dc9-4b57-a97f-1969e5937569.png)
 
 ## :link: WBS
-* [WBS.xlsx](https://docs.google.com/viewer?url=https://github.com/Hongin-Lim/Bigdata_Project/blob/main/files/WBS.xlsx?raw=True)
+* [WBS.xlsx](https://docs.google.com/viewer?url=https://github.com/Hongin-Lim/Bigdata_Project/blob/main/files/WBS(0603).xlsx?raw=True)
 
 ## :link: 서비스 아키텍쳐
 ![image](https://user-images.githubusercontent.com/97823665/170420473-9a7d6da6-850e-448a-ba62-b64256680777.png)
