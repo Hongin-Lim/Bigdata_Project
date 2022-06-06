@@ -10,24 +10,36 @@
 
 ## :clipboard: 사용 기술
 ### 백엔드
-#### <img src="https://img.shields.io/badge/Django-00C853?style=for-the-badge&logo=Django&logoColor=white"/> <img src="https://img.shields.io/badge/Python-673AB7?style=for-the-badge&logo=Python&logoColor=white"/>
+* Django
+* Python
 * Django ORM
 
 ### DB
-#### <img src="https://img.shields.io/badge/MySQL-29B6F6?style=for-the-badge&logo=Mysql&logoColor=white"/>
+* MySQL
 
 ### AWS
-#### <img src="https://img.shields.io/badge/EC2-FFEE58?style=for-the-badge&logo=EC2&logoColor=white"/> <img src="https://img.shields.io/badge/RDS-FFEE58?style=for-the-badge&logo=EC2&logoColor=white"/> <img src="https://img.shields.io/badge/Amazon S3-FFEE58?style=for-the-badge&logo=Amazon S3&logoColor=white"/>
+* EC2
+* RDS
+* S3
 
 ### 프론트엔드
-<img alt="Html" src ="https://img.shields.io/badge/HTML-E34F26.svg?&style=for-the-badge&logo=HTML5&logoColor=white"/> <img alt="Css" src ="https://img.shields.io/badge/CSS-1572B6.svg?&style=for-the-badge&logo=CSS3&logoColor=white"/> <img alt="JavaScript" src ="https://img.shields.io/badge/JavaScriipt-F7DF1E.svg?&style=for-the-badge&logo=JavaScript&logoColor=black"/>
+* HTML
+* CSS
+* JavaScript
 
 ### 플랫폼
-#### <img alt="Kubernetes" src ="https://img.shields.io/badge/Kubernetes-42A5F5?&style=for-the-badge&logo=Kubernetes&logoColor=white"/> <img alt="ELK" src ="https://img.shields.io/badge/ELK STACK-FFD54F?&style=for-the-badge&logo=Elastic Stack&logoColor=white"/> <img alt="Kafka" src ="https://img.shields.io/badge/Kafka-424242?&style=for-the-badge&logo=Apache Kafka&logoColor=white"/> <img alt="Spark" src ="https://img.shields.io/badge/Spark-F44336?&style=for-the-badge&logo=Apache Spark&logoColor=white"/> <img alt="Spark" src ="https://img.shields.io/badge/Docker-29B6F6?&style=for-the-badge&logo=Docker&logoColor=white"/>
+* Kubernetes
+* Docker
+* ELK Stack
+* Kafka
+* Spark
 
 ### CI / CD
-#### <img alt="Spark" src ="https://img.shields.io/badge/Jenkins-F44336?&style=for-the-badge&logo=Jenkins&logoColor=white"/>
+* Jenkins
 
+### 배포
+* Nginx
+* Gunicorn
 
 ## :clipboard: 로그 분석 도구
 * ELK Stack
