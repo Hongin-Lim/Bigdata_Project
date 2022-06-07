@@ -1,29 +1,25 @@
+# Spark deployment 생성 yaml 파일
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kafka
+  name: hadoop-spark
   namespace: default
 spec:
   selector:
     matchLabels:
-      app: kafka
+      app: hadoop-spark
   replicas: 1
   template:
     metadata:
       labels:
-        app: kafka
+        app: hadoop-spark
     spec:
       containers:
-      - name: kafka
-        image: jerry2458/ubuntu-kafka:1.0
+      - name: hadoop-spark
+        image: jerry2458/hadoop-spark:1.0
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 9092
+        - containerPort: 4040
           protocol: TCP
-        - containerPort: 9093
-          protocol: TCP
-        - containerPort: 2181
-          protocol: TCP
-
         command: [ "sleep" ]
         args: [ "infinity" ]

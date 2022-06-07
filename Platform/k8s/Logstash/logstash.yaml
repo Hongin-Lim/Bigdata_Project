@@ -1,3 +1,4 @@
+# Logstash deployment 생성 yaml 파일
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -22,4 +23,3 @@ spec:
           protocol: TCP
         command: [ "sleep" ]
         args: [ "infinity" ]
-
