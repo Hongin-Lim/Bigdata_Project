@@ -1,0 +1,31 @@
+# Elasticsearch 기상 API 데이터 _mappings
+
+PUT weather
+PUT weather/_mappings
+{
+  "properties": {
+    "stnId":  { "type": "text"},
+    "tm":  { "type": "text"},
+    "ta":  { "type": "float"},
+    "rn":  { "type": "float"},
+    "ws":  { "type": "float"},
+    "wd":  { "type": "float"},
+    "hm":  { "type": "float"}
+  }
+}
+
+# Elasticsearch 가격품목 API 데이터 _mappings
+
+PUT price
+PUT price/_mappings
+{
+  "properties": {
+    "PUM_NM_A":  { "type": "text"},
+    "U_NAME":  { "type": "text"},
+    "AV_P_A":  { "type": "integer"},
+    "PAV_P_A":  { "type": "integer"},
+    "PAV_PY_A":  { "type": "integer"},
+    "A_C":  { "type": "float"},
+    "E_NAME":  { "type": "text"}
+  }
+}
