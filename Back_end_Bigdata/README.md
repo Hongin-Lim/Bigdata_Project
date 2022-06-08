@@ -41,4 +41,5 @@
 * [API.xlsx](https://docs.google.com/viewer?url=https://github.com/Hongin-Lim/Bigdata_Project/blob/main/files/API.xlsx?raw=True)
 
 ## :link: ERD 설계
-*![ERD](https://user-images.githubusercontent.com/97941148/166879977-4f215cd5-3dc9-4b57-a97f-1969e5937569.png)
+![빅베리마켓 ERD](https://user-images.githubusercontent.com/97941148/172517720-0915e39d-69b5-4118-ab80-7a9d4b20f875.png)
+
