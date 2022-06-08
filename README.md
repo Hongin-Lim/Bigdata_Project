@@ -69,4 +69,4 @@
 * [WBS.xlsx](https://docs.google.com/viewer?url=https://github.com/Hongin-Lim/Bigdata_Project/blob/main/files/WBS(0603).xlsx?raw=True)
 
 ## :link: 서비스 아키텍쳐
-![image](https://user-images.githubusercontent.com/97823665/170420473-9a7d6da6-850e-448a-ba62-b64256680777.png)
+![구성도](https://user-images.githubusercontent.com/97941148/172517980-6d8aafb9-a214-4594-9170-fb07090db1d7.png)
