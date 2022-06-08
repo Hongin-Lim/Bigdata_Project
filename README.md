@@ -9,6 +9,8 @@
 * GitHub
 
 ## :clipboard: 사용 기술
+![프로그램 로고](https://user-images.githubusercontent.com/97941148/172524936-14e8577f-ce69-46b7-abfd-834afb5aca57.png)
+* * * 
 ### 백엔드
 * Django
 * Python
