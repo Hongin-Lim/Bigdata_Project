@@ -4,7 +4,7 @@
 
 ▶ Data PipeLine 전체 흐름도
 
-![image](https://user-images.githubusercontent.com/97893538/172515060-2a27c33b-c3fa-4612-aa6f-7828448db96d.png)
+![image](https://user-images.githubusercontent.com/97893538/172749345-7a7858ad-c3f9-459e-9f12-24eff6db299b.png)
 
 - dd
 - 소비자의 로그 데이터 분석(초록색 화살표)
@@ -24,7 +24,7 @@
 
 ▶ Data PipeLine - OPEN API 데이터 흐름도
 
-![image](https://user-images.githubusercontent.com/97893538/172515131-29dfcf88-301f-45bc-9513-25111233d2b9.png)
+![image](https://user-images.githubusercontent.com/97893538/172749388-fc7f25b6-9634-4d0b-8bfe-e7dd9dfceef9.png)
 
 - OPEN API 데이터 -> Kafka -> Logstash -> ElasticSearch -> Kibana -> Django2(BigVeryMarket)
 
@@ -42,7 +42,7 @@
 
 ▶ Data PipeLine - Log 데이터 흐름도
 
-![image](https://user-images.githubusercontent.com/97893538/172515188-46240698-a0e4-441a-8051-674e07057a8d.png)
+![image](https://user-images.githubusercontent.com/97893538/172749421-fd9cee3b-1dc3-49be-9dbd-1a4c789da0c9.png)
 
 - 소비자의 Log 데이터(Django1, VeryMarket) -> Kafka -> Spark
 
@@ -60,7 +60,7 @@
 
 ▶ CI /CD 흐름도
 
-![image](https://user-images.githubusercontent.com/97893538/172520682-74059816-e844-4023-ad86-a262588d3814.png)
+![image](https://user-images.githubusercontent.com/97893538/172749463-1855be13-d3a2-421b-b03b-23fd201b9468.png)
 
 - 개발자(dev)가 어쩌구 저쩌구..
 
