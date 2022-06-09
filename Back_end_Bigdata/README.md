@@ -49,8 +49,8 @@
    * KIBANA 대시보드 (API)
 <br>
 
-## :factory: 시스템 구조
-* 
+## :factory: 시스템 구성도
+![image](https://user-images.githubusercontent.com/97941148/172750286-b2c5c3f8-22fb-415b-aa02-3f30ce8727a9.png)
 
 ## :link: UI 설계도
 * [-UI.pdf](https://docs.google.com/viewer?url=https://github.com/Hongin-Lim/Bigdata_Project/blob/main/files/-UI.pdf?raw=True)
