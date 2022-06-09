@@ -21,8 +21,7 @@
 <br/>
 
 - DockerHub Push
-    - Jenkins가 변경된 GitHub 소스를 기반으로 Dockerfile 생성
-    - 변경된 Dockerfile을 기반으로 Docker Image를 생성
+    - Jenkins가 변경된 GitHub 소스를 기반으로 Dockerfile을 사용하여 Docker Image를 생성
     - 변경된 Docker Image를 DockerHub에 Push
 
 <br/>
