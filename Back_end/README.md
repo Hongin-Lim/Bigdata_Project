@@ -64,7 +64,7 @@
    * 상품 리뷰
 
 ## :factory: 시스템 구조
-* 
+![image](https://user-images.githubusercontent.com/97941148/172750568-ec96722a-0fca-4f34-8a72-7bdc4fb29051.png)
 
 ## :link: UI 설계도
 * [-UI.pdf](https://docs.google.com/viewer?url=https://github.com/Hongin-Lim/Bigdata_Project/blob/main/files/-UI.pdf?raw=True)
