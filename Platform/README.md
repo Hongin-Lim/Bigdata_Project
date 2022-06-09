@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=300&section=header&text=Hello%20VeryMarket!&fontColor=f7f5f5&fontSize=50)
+![rect](https://capsule-render.vercel.app/api?type=rect&color=gradient&text=Hello%20VeryMarket!&fontAlign=30&fontSize=30&descAlign=60&descAlignY=50)
 
 # 읽어주세요!
 
@@ -147,4 +147,4 @@
 <br/>
 <br/>
 
-![footer](https://capsule-render.vercel.app/api?type=soft&color=auto&height=300&section=footer&text=See%20you%20again%20VeryMarket!&fontColor=f7f5f5&fontSize=50)
+![rect](https://capsule-render.vercel.app/api?type=rect&color=gradient&text=See%20you%20again%20VeryMarket!&fontAlign=30&fontSize=30&descAlign=60&descAlignY=50)
