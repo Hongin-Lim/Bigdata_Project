@@ -63,7 +63,7 @@
    * 상품 등록
    * 상품 리뷰
 
-## :factory: 시스템 구조
+## :factory: 시스템 구성도
 ![image](https://user-images.githubusercontent.com/97941148/172750568-ec96722a-0fca-4f34-8a72-7bdc4fb29051.png)
 
 ## :link: UI 설계도
