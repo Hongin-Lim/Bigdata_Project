@@ -8,7 +8,7 @@
 * Ubuntu
 * PyCharm
 * Django
-* AWS
+* AWS(EC2 RDS S3)
 * Kubernetes
 * Jenkins
 * GitHub
@@ -18,7 +18,6 @@
 * * * 
 ### 백엔드
 * Django
-* Python
 * Django ORM
 
 ### DB
