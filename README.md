@@ -55,6 +55,7 @@
 
 ## :link: 서비스 아키텍쳐
 ![구성도](https://user-images.githubusercontent.com/97941148/172517980-6d8aafb9-a214-4594-9170-fb07090db1d7.png)
+* * * 
 
 ## :clipboard: 주요 키워드
 * HTTP 통신
@@ -67,8 +68,8 @@
 * Kubernetes
 
 ## :clipboard: 구현 기능
-### 백엔드
-## :clipboard: 소비자를 위한 쇼핑몰 서비스 '베리마켓'
+# Back_End ↓
+## :link: 소비자를 위한 쇼핑몰 서비스 '베리마켓'
 
 ▶공지사항 - 관리자 공지글 CRUD 공지사항list, 댓글 CRUD, 페이징 구현
 
@@ -90,7 +91,7 @@
 
 
 
-## :clipboard: 판매자를 위한 빅데이터 정보 제공 서비스 '빅베리마켓'
+## :link: 판매자를 위한 빅데이터 정보 제공 서비스 '빅베리마켓'
 
 ▶게시글 - 게시글 CRUD 게시글list, 댓글 CRUD, 페이징 구현
 
@@ -107,22 +108,21 @@
 ▶사용자권한 관리(일반유저, 중간관리자, 최종관리자) 구현
 
 ▶사용자 아바타 서비스 구현
+* * * 
 
-
-## :link: CI/CD Jenkins 흐름도
-![CI__CD](https://user-images.githubusercontent.com/96184680/173300685-b5bc82e9-9d13-4148-9bd9-f4da6d2d6f6b.png)
+## :link: CI/CD Jenkins 개발자 입장 흐름도
 ![CI__CD_v2_1](https://user-images.githubusercontent.com/96184680/173300690-e17e9f76-8695-4a82-b183-057e16170f83.png)
 
 ## :link: 소비자, 판매자 입장 전체 흐름도
-### 소비자 서비스(VeryMarket)
-### 판매자 서비스(Big VeryMarket)
+#### 소비자 서비스(VeryMarket)
+#### 판매자 서비스(Big VeryMarket)
 ![Data_PipeLine](https://user-images.githubusercontent.com/96184680/173300693-c8b17182-ad15-4569-820b-5899cf92a0ac.png)
 ## :link: 소비자 입장 흐름도
 ![Data_PipeLine_API_1](https://user-images.githubusercontent.com/96184680/173300700-4db5be24-4547-46bb-a0d4-8d85200394de.png)
 ## :link: 판매자 입장 흐름도
 ![Data_PipeLine_Log_3](https://user-images.githubusercontent.com/96184680/173300703-480b7aea-e3b3-4d59-a159-a3d9854fae9a.png)
 
-
+* * * 
 ## :link: WBS
 * [WBS.xlsx](https://docs.google.com/viewer?url=https://github.com/Hongin-Lim/Bigdata_Project/blob/main/files/WBS(0603).xlsx?raw=True)
 
