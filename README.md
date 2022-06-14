@@ -1,9 +1,14 @@
 # 🍓 빅데이터 활용 과일 구매 쇼핑몰, 데이터 시각화 개발 프로젝트(VeryMarket, BigVerymarket) 
 
+## :clipboard: 자식 깃
+* Verymarket_BackEnd_Git =  https://github.com/Hongin-Lim/Market_Backend
+* Big-Verymarket_BackEnd_Git = https://github.com/Hongin-Lim/Market_Backend_Bigdata
+
 ## :clipboard: 개발환경 및 도구
-* Linux
+* Ubuntu
 * PyCharm
 * Django
+* AWS
 * Kubernetes
 * Jenkins
 * GitHub
@@ -63,7 +68,7 @@
 
 ## :clipboard: 구현 기능
 ### 백엔드
-소비자를 위한 쇼핑몰 서비스 '베리마켓'
+## :clipboard: 소비자를 위한 쇼핑몰 서비스 '베리마켓'
 
 ▶공지사항 - 관리자 공지글 CRUD 공지사항list, 댓글 CRUD, 페이징 구현
 
@@ -85,7 +90,7 @@
 
 
 
-판매자를 위한 빅데이터 정보 제공 서비스 '빅베리마켓'
+## :clipboard: 판매자를 위한 빅데이터 정보 제공 서비스 '빅베리마켓'
 
 ▶게시글 - 게시글 CRUD 게시글list, 댓글 CRUD, 페이징 구현
 
@@ -104,6 +109,18 @@
 ▶사용자 아바타 서비스 구현
 
 
+## :link: CI/CD Jenkins 흐름도
+![CI__CD](https://user-images.githubusercontent.com/96184680/173300685-b5bc82e9-9d13-4148-9bd9-f4da6d2d6f6b.png)
+![CI__CD_v2_1](https://user-images.githubusercontent.com/96184680/173300690-e17e9f76-8695-4a82-b183-057e16170f83.png)
+
+## :link: 소비자, 판매자 입장 전체 흐름도
+### 소비자 서비스(VeryMarket)
+### 판매자 서비스(Big VeryMarket)
+![Data_PipeLine](https://user-images.githubusercontent.com/96184680/173300693-c8b17182-ad15-4569-820b-5899cf92a0ac.png)
+## :link: 소비자 입장 흐름도
+![Data_PipeLine_API_1](https://user-images.githubusercontent.com/96184680/173300700-4db5be24-4547-46bb-a0d4-8d85200394de.png)
+## :link: 판매자 입장 흐름도
+![Data_PipeLine_Log_3](https://user-images.githubusercontent.com/96184680/173300703-480b7aea-e3b3-4d59-a159-a3d9854fae9a.png)
 
 
 ## :link: WBS
