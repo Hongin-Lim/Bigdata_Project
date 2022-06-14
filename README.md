@@ -125,6 +125,21 @@
 ![Data_PipeLine_Log_3](https://user-images.githubusercontent.com/96184680/173300703-480b7aea-e3b3-4d59-a159-a3d9854fae9a.png)
 
 * * * 
+## :clipboard: 시연영상
+
+### :link: 소비자를 위한 쇼핑몰 서비스 '베리마켓' 시연영상(GIF)
+![베리마켓시연영상](https://user-images.githubusercontent.com/96184680/173600061-9a35bb92-5e83-4b5a-a019-f7d1687f6663.gif)
+
+### :link: 판매자를 위한 빅데이터 정보 제공 서비스 '빅베리마켓' 시연영상(GIF)
+![빅베리마켓시연영상](https://user-images.githubusercontent.com/96184680/173600921-9ba14f6c-890e-4007-bf39-f83649be8bd8.gif)
+
+### :link: 기상, 과일도매가 API 파이프라인 API - Python - Kafka - logstash - elastic search - kibana 시연영상(GIF)
+![기상,가격 API 파이프라인 시연영상](https://user-images.githubusercontent.com/96184680/173601889-0727d2f6-17db-462d-97ad-e28a57ebf300.gif)
+
+### :link: 결제정보 로그데이터 파이프라인 Django - Python - Kafka - Spark 시연영상(GIF)
+![결제정보 로그데이터 파이프라인 시연영상](https://user-images.githubusercontent.com/96184680/173602286-755787f6-ef7f-496b-b6c3-36337eaea51b.gif)
+
+* * * 
 ## :link: WBS
 * [WBS.xlsx](https://docs.google.com/viewer?url=https://github.com/Hongin-Lim/Bigdata_Project/blob/main/files/WBS(0603).xlsx?raw=True)
 
