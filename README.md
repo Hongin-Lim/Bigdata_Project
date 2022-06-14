@@ -17,6 +17,7 @@
 ![프로그램 로고](https://user-images.githubusercontent.com/97941148/172524936-14e8577f-ce69-46b7-abfd-834afb5aca57.png)
 * * * 
 ### 백엔드
+* Python
 * Django
 * Django ORM
 
@@ -61,8 +62,10 @@
 * REST API
 * AJAX
 * CI/CD
-* Realtime LogData 분석 및 시각화
-* Realtime 공공API 분석 및 시각화
+* Real-Time Storage
+* Real-Time Processing
+* Real_Time LogData 분석 및 시각화
+* Real_Time 공공API 분석 및 시각화
 * AWS 클라우드 서비스
 * Kubernetes
 
